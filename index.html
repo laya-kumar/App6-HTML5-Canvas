@@ -20,13 +20,13 @@ Brief Description of Goal of Code:
 Design an app that can display shapes/lines/text onto an HTML5 canvas. 
  
 Known Issues:
---------
+None that can be found
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
    <head> 
-      <title>App6---HTML5-Canvas</title>  
+      <title>App6: HTML5 Canvas</title>  <!--names the page-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -35,9 +35,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+function draw_shape(){ //function for drawing a rectangle onto the canvas
+	var shape_canvas = document.getElementById("myCanvas"); //determines where to draw shape
+	var shape_context = shape_canvas.getContext("2d"); //determines where to draw shape
+	shape_context.fillRect (200, 150, 75, 25) //size of rectangle that is inserted
+	}
+	
+
+	
+	
+	
 </script>
 	
 
