@@ -51,14 +51,14 @@ function insert_image(){
 	var dtx = d.getContext("2d"); //recognizes canvas
 	var img = Image01(); //inserts image onto canvas
 	img.srd = 'empire_state.jpg'; //identifies file with picture
-	dtx.drawImage(img, 100, 10, 35, 35); //specifies location and size of image on canvas
+	dtx.drawImage(img, 200, 10, 35, 35); //specifies location and size of image on canvas
 	}
 	
 function draw_text(){ //function for drawing text onto the canvas
 	var d = document.getElementById("myCanvas"); //recognizes canvas
 	var dtx = d.getContext("2d"); //recognizes canvas
 	dtx.font = "20 px Verdana"; //customizes size and font style
-	dtx.fillText("Laya", 1, 1); //writes name on specific part of the canvas
+	dtx.fillText("Laya", 30, 30); //writes name on specific part of the canvas
 	}
 	
 function clear_canvas(){
