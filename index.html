@@ -40,17 +40,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-function draw_shape(){ //function for drawing a rectangle onto the canvas
-	var shape_canvas = document.getElementById("myCanvas"); //determines where to draw shape
-	var shape_context = shape_canvas.getContext("2d"); //determines where to draw shape
-	shape_context.fillRect (200, 150, 75, 25) //size of rectangle that is inserted
+function draw_b(){ //function for drawing a rectangle onto the canvas
+	var b_canvas = document.getElementById("myCanvas"); //determines where to draw shape
+	var b_context = b_canvas.getContext("2d"); //determines where to draw shape
+	b_context.fillRect (200, 150, 75, 25) //specifies location and size of rectangle that is inserted
 	}
 	
 function insert_image(){
 	var d = document.getElementById("myCanvas"); //recognizes canvas
 	var dtx = d.getContext("2d"); //recognizes canvas
 	var img = Image01(); //inserts image onto canvas
-	img.srd = 
+	img.srd = 'empire_state.jpg'; //identifies file with picture
+	dtx.drawImage(img, 100, 10, 35, 35); //specifies location and size of image on canvas
+	}
 	
 function draw_text(){ //function for drawing text onto the canvas
 	var d = document.getElementById("myCanvas"); //recognizes canvas
@@ -59,7 +61,10 @@ function draw_text(){ //function for drawing text onto the canvas
 	dtx.fillText("Laya", 1, 1); //writes name on specific part of the canvas
 	}
 	
-	
+function clear_canvas(){
+	var b_canvas = document.getElementById("myCanvas");
+	b_canvas.width = b_canvas.width;
+	}
 	
 </script>
 	
@@ -86,18 +91,23 @@ function draw_text(){ //function for drawing text onto the canvas
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6-HTML5-Canvas</h1>
+	<h1>App6: HTML5 Canvas</h1> <!--name of page-->
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Use the buttons to put items on the canvas.</p> <!--changed sentence-->
+	<p>Use the buttons to put items on the canvas.</p> <!--instructions for users of webpage-->
 		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!--text providing information-->
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--text providing information-->
 	
 	<canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"> <!--creates canvas with specified width, height, and solid border-->
 	</canvas>
+	
+</div> 
+	<a onclick=draw_b();" class="w3-btn w3-black"> Draw Rectangle</a> 
+
+	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
