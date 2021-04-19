@@ -49,7 +49,7 @@ function draw_b(){ //function for drawing a rectangle onto the canvas
 function insert_image(){
 	var d = document.getElementById("myCanvas"); //recognizes canvas
 	var dtx = d.getContext("2d"); //recognizes canvas
-	var img = Image01(); //inserts image onto canvas
+	var img = new Image(); //inserts image onto canvas
 	img.src = 'buildings.png'; //identifies file with picture
 	dtx.drawImage(img, 200, 10, 35, 35); //specifies location and size of image on canvas
 	}
