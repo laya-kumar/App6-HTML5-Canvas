@@ -43,7 +43,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 function draw_b(){ //function for drawing a rectangle onto the canvas
 	var b_canvas = document.getElementById("myCanvas"); //determines where to draw shape
 	var b_context = b_canvas.getContext("2d"); //determines where to draw shape
-	b_context.fillRect (200, 150, 110, 45) //specifies location and size of rectangle that is inserted
+	b_context.fillRect (170, 130, 90, 45) //specifies location and size of rectangle that is inserted
 	}
 	
 function insert_image(){
@@ -51,13 +51,13 @@ function insert_image(){
 	var dtx = d.getContext("2d"); //recognizes canvas
 	var img = new Image(); //inserts image onto canvas
 	img.src = 'buildings.png'; //identifies file with picture
-	dtx.drawImage(img, 15,90, 90, 65); //specifies location and size of image on canvas
+	dtx.drawImage(img, 15, 90, 150, 105); //specifies location and size of image on canvas
 	}
 	
 function draw_text(){ //function for drawing text onto the canvas
 	var d = document.getElementById("myCanvas"); //recognizes canvas
 	var dtx = d.getContext("2d"); //recognizes canvas
-	dtx.font = "34 px Verdana"; //customizes size and font style
+	dtx.font = "65 px Verdana"; //customizes size and font style
 	dtx.fillText("Laya", 30, 30); //writes name on specific part of the canvas
 	}
 	
