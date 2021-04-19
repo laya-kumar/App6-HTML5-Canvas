@@ -47,11 +47,14 @@ function draw_b(){ //function for drawing a rectangle onto the canvas
 	}
 	
 function insert_image(){
-	var d = document.getElementById("myCanvas"); //recognizes canvas
-	var dtx = d.getContext("2d"); //recognizes canvas
-	var img = Image01(); //inserts image onto canvas
-	img.src = 'buildings.png'; //identifies file with picture
-	dtx.drawImage(img, 200, 10, 35, 35); //specifies location and size of image on canvas
+	var b_canvas = document.getElementById("myCanvas"); //determines where to draw shape
+	var b_context = b_canvas.getContext("2d"); //determines where to draw shape
+	b_context.fillRect (200, 150, 75, 25) //specifies location and size of rectangle that is inserted
+	//var d = document.getElementById("myCanvas"); //recognizes canvas
+	//var dtx = d.getContext("2d"); //recognizes canvas
+	//var img = Image01(); //inserts image onto canvas
+	//img.src = 'buildings.png'; //identifies file with picture
+	//dtx.drawImage(img, 200, 10, 35, 35); //specifies location and size of image on canvas
 	}
 	
 function draw_text(){ //function for drawing text onto the canvas
