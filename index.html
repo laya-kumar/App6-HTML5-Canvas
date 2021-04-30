@@ -47,18 +47,18 @@ function draw_rect(){ //function for drawing a rectangle onto the canvas
 	}
 	
 function load_image(){ //function for inserting image into rectangle
+	var im_build = new Image(); //creates a variable for the image
+	im_build.src = 'buildings.png'; //identifies file with picture
 	var c = document.getElementById("myCanvas"); //recognizes canvas
 	var ctx = c.getContext("2d"); //recognizes canvas
-	var img = new Image(); //inserts image onto canvas
-	img.src = 'buildings.png'; //identifies file with picture
-	ctx.drawImage(img, 15, 90, 150, 105); //specifies location and size of image on canvas
+	ctx.drawImage(im_build, 15, 90, 150, 105); //specifies location and size of image on canvas
 	}
 	
 function write_text(){ //function for drawing text onto the canvas
 	var c = document.getElementById("myCanvas"); //recognizes canvas
 	var ctx = c.getContext("2d"); //recognizes canvas
 	ctx.font = "40px Verdana"; //customizes size and font style
-	ctx.fillText("Laya", 30, 30); //writes name on specific part of the canvas
+	ctx.fillText("Laya", 30, 50); //writes name on specific part of the canvas
 	}
 	
 function reset_canvas(){ //function for clearing the canvas
